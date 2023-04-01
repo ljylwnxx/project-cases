@@ -1,23 +1,17 @@
-// const { defineConfig } = require('@vue/cli-service')
-// module.exports = defineConfig({
-//   transpileDependencies: true
-// })
-const { name } = require('./package.json')
-
-module.exports = {
-  publicPath: '/', // 打包相对路径
+ module.exports = {
+  lintOnSave: false, // 关闭eslint检测
   devServer: {
-    port: 7663, // 运行端口号
+    port: 8083, // 运行端口号
     headers: {
-      'Access-Control-Allow-Origin': '*' // 防止加载时跨域
+      'Access-Control-Allow-Origin': '*' // 因为qiankun内部请求都是fetch来请求资源，所以子应用必须允许跨域,防止加载时跨域
     }
   },
-  chainWebpack: config => config.resolve.symlinks(false),
+  // chainWebpack: config => config.resolve.symlinks(false),
   configureWebpack: {
     output: {
-      library: `${name}-[name]`,
-      libraryTarget: 'umd', // 把微应用打包成 umd 库格式
-      jsonpFunction: `webpackJsonp_${name}`
+      //资源打包路径
+      library: 'vueApp',
+      libraryTarget: 'umd'
     }
   }
 }
