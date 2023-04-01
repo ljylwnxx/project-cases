@@ -8,7 +8,7 @@ const apps = [
 	name:'subApp', //子应用的名称
 	entry:'//localhost:8081',//子应用的域名
 	container:'#vueContainer',//承载子应用的容器，在上面App.vue中定义
-	activeRule:'/subapp/', // 被激活的子应用的路由
+	activeRule:'/subapp', // 被激活的子应用的路由
 }
 ]
 registerMicroApps(apps);//注册子应用
