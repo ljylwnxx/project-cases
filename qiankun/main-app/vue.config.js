@@ -1,10 +1,6 @@
-const { defineConfig } = require('@vue/cli-service')
+
 module.exports ={
-  defineConfig:
-    {
-      transpileDependencies: true,
-      lintOnSave:false//关闭语法检查
-    },
+  lintOnSave: false,
   devServer:{
     port: 8081, //这里的端口是必须和父应用配置的子应用端口一致
     headers: {
