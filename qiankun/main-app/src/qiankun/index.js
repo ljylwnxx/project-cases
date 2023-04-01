@@ -1,5 +1,5 @@
 import { registerMicroApps, start } from "qiankun";
-import store from "@/store";
+// import store from "@/store";
 
 
 registerMicroApps([
@@ -8,10 +8,10 @@ registerMicroApps([
     entry: "http://localhost:8080", // 微应用入口
     container: "#subapp-viewport", // 微应用挂载的div
     activeRule: "/sub-app/",
-    props: {
-      // 此处将父应用的 store 传入子应用
-      store
-    }
+    // props: {
+    //   // 此处将父应用的 store 传入子应用
+    //   store
+    // }
   }
 ])
 
