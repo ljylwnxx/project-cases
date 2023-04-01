@@ -3,8 +3,8 @@ import App from './App.vue'
 import router from './router'
 
 let instance = null; //设置全局变量，用于保存或销毁Vue实例
-function render(props){
-	const { container } = props;
+function render(props = {}){
+	const { container } = props
 	instance = new Vue({
 		router,
 		render: h => h(App)
