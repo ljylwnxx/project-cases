@@ -1,4 +1,5 @@
 module.exports = {
+	lintOnSave: false,
 	devServer:{
 		port:8081,
 		headers:{
@@ -7,13 +8,8 @@ module.exports = {
 	},
 	configureWebpack:{
 		output:{
-			library:'sub-app',
+			library:'subApp',
 			libraryTarget:'umd'
 		}
 	}
 }
-const { defineConfig } = require('@vue/cli-service')
-module.exports = defineConfig({
-  transpileDependencies: true,
-  lintOnSave:false//关闭语法检查
-})
