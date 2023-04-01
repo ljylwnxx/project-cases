@@ -1,5 +1,6 @@
-{
-    path: "/sub-app/*",
-    meta: { title: "子应用" },
-    component: () => import("@/views/qiankun/index")
-}
+//...省略原有不需修改的代码，以下是修改后的代码
+const router = new VueRouter({
+	mode:'history',
+	base: '',
+	routes
+})
